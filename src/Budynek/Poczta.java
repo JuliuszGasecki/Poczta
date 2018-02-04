@@ -9,8 +9,10 @@ import java.util.*;
 
 public class Poczta {
 	
-	public
-	void zarzadzaj()
+	/*
+	 * Glowna metoda obslugujaca glowna petle
+	 */
+	public void zarzadzaj()
 	{
 		Scanner in = new Scanner(System.in);
 		Scanner str = new Scanner(System.in);
@@ -26,6 +28,10 @@ warunek:		do {
 		
 		System.out.println("Dzisiejsza ilosc paczek to " + p.iloscPrzesylek());	
 	}
+	
+	/*
+	 * Skanowanie wagi
+	 */
 		
 	double podajWage(Scanner a)
 	{
@@ -34,18 +40,27 @@ warunek:		do {
 		return 	b;	
 	}
 	
+	/*
+	 * Skanowanie adresata
+	 */
 	String podajAdresata(Scanner a)
 	{
 		System.out.println("Podaj adresata: ");
 		String b=a.nextLine();
 		return b;	
 	}
+	/*
+	 * Skanowanie nadawcy
+	 */
 	String podajNadawce(Scanner a)
 	{
 		System.out.println("Podaj nadawce: ");
 		String b=a.nextLine();
 		return b;	
 	}
+	/*
+	 * Skanowanie miasta docelowego
+	 */
 	String podajCel(Scanner a)
 	{
 		System.out.println("Podaj do jakiego miasta: ");
@@ -54,7 +69,11 @@ warunek:		do {
 	}	
 	
 	
-	
+	/*
+	 * 
+	 * Main!!!
+	 * 
+	 */
 	public static void main(String[] args)
 	{
 		Poczta p = new Poczta();

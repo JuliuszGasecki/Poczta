@@ -60,7 +60,9 @@ public class Punkt {
 	}
 	
 	
-	
+/*
+ * Sprawdza czy waga czy paczka
+ */
 	int czyList(double waga)
 	{
 		if(waga>=0.5)
@@ -81,14 +83,12 @@ public class Punkt {
 	}
 	
 	/*
-	 * 
 	 * Metoda oblcizajaca cene za wyslanie paczki
-	 * 
 	 */
 	double obliczCene(String miastoPoczatkowe, String miastoKoncowe)
 	{
 
-		System.out.println("Odleglosc to :" +  mapa.wybierzMiasto(miastoPoczatkowe, miastoKoncowe));
+		//System.out.println("Odleglosc to :" +  mapa.wybierzMiasto(miastoPoczatkowe, miastoKoncowe));
 		return przesylki.get(przesylki.size()-1).setCena( mapa.wybierzMiasto(miastoPoczatkowe, miastoKoncowe) );
 	}
 	
