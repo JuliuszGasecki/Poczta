@@ -10,11 +10,20 @@ public class Miasto {
 	{
 		
 	}
-	
-	public Miasto(double X, double Y)
+	public
+	String getNazwa()
 	{
-		this.X = X;
-		this.Y = Y;
+		return nazwa;
 	}
+	
+	double getX()
+	{
+		return X;
+	}
+	double getY()
+	{
+		return Y;
+	}
+	
 
 }

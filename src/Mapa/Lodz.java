@@ -4,8 +4,8 @@ public class Lodz extends Miasto{
 	
 	public Lodz()
 	{
-		this.X = X;
-		this.Y = Y;
+		this.X = 0;
+		this.Y = 0;
 		this.nazwa="Lodz";
 	}
 
