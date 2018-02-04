@@ -20,6 +20,9 @@ public class Mapa {
 		miasta = new ArrayList<>();
 		miasta.add(new Lodz());
 		miasta.add(new Berlin());
+		miasta.add(new NowyJork());
+		miasta.add(new Rio());
+		miasta.add(new Tokio());
 		
 	}
 	double wyliczOdleglosc(double X1, double Y1, double X2, double Y2)

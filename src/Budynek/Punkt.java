@@ -8,20 +8,20 @@ package Budynek;
 import Przesylka.*;
 import Mapa.*;
 import java.util.List;
+import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Punkt {
 	
-	/*
-	 * 
+	/* 
 	 * Lista przesylek przyjmujaca przesylki
 	 * Miasto - zmienna ktora sluzy do obliczania odleglosci
 	 * mapa zawiera metode odliczajaca odleglosc
-	 * 
 	 */
 	List<Przesylka> przesylki ;
 	String miasto;
 	Mapa mapa;
+	static int nextID = 0;
 	
 	public
 	/*
@@ -38,12 +38,37 @@ public class Punkt {
 	/*
 	 * Metoda do dodawania listu do LISTY przesylek
 	 */
-	void dodajList()
+	public void dodajPrzesylke(double waga, int rozmiar, String adresat, String imie, String adres, String nadanie)
 	{
-		Listt list = new Listt(1, 1, 1, "Lodz", "LOL", "LOl");
-			przesylki.add(list);
-		System.out.println("Dodano list :D");
-		System.out.println("Cena to :" + obliczCene("Lodz", "Berlin"));
+		
+		if(czyList(waga) == 1)
+		{	
+			przesylki.add(new Paczka(nextID++, waga, rozmiar, adresat, imie, adres));
+			System.out.println("Dodano paczke");
+		}
+	else if(czyList(waga) == 2)
+	{
+			przesylki.add(new Listt(nextID++, waga, rozmiar, adresat, imie, adres));
+			System.out.println("Dodano list");
+	}
+	else if (czyList(waga) == -1)
+		System.out.println("blad");
+		
+		przesylki.get(przesylki.size()-1).setMiastoNadania(nadanie);
+		
+		System.out.println("Cena to :" + obliczCene(nadanie, adres));
+	}
+	
+	
+	
+	int czyList(double waga)
+	{
+		if(waga>=0.5)
+			return 1;
+		else if	(waga<0.5)
+			return 2;
+		else 
+			return -1;
 	}
 	
 	
@@ -63,9 +88,10 @@ public class Punkt {
 	double obliczCene(String miastoPoczatkowe, String miastoKoncowe)
 	{
 
-	//	System.out.println("Odleglosc to :" +  mapa.wybierzMiasto(miastoPoczatkowe, miastoKoncowe));
+		System.out.println("Odleglosc to :" +  mapa.wybierzMiasto(miastoPoczatkowe, miastoKoncowe));
 		return przesylki.get(przesylki.size()-1).setCena( mapa.wybierzMiasto(miastoPoczatkowe, miastoKoncowe) );
 	}
+	
 	
 	
 

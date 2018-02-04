@@ -6,9 +6,7 @@
  */
 package Przesylka;
 
-abstract public class Paczka extends Przesylka {
-	
-	boolean typ;
+public class Paczka extends Przesylka {
 	
 	public Paczka(int ID, double waga, int rozmiar, String adresat, String nadawca, String miasto)
 	{

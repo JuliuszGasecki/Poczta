@@ -41,13 +41,13 @@ public class Przesylka {
 			switch(rozmiar)
 			{
 			case 1:
-				this.cena =  waga * odleglosc * 0.01;
+				this.cena =  waga * odleglosc * 0.1;
 				break;
 			case 2:
-				this.cena =  waga * odleglosc * 0.015;
+				this.cena =  waga * odleglosc * 0.15;
 				break;
 			case 3:
-				this.cena =  waga * odleglosc * 0.02;
+				this.cena =  waga * odleglosc * 0.2;
 				break;
 				default :
 					this.cena = -1;
@@ -61,13 +61,13 @@ public class Przesylka {
 			switch(rozmiar)
 			{
 			case 1:
-				this.cena =  waga * odleglosc * 0.03;
+				this.cena =  waga * odleglosc * 0.3;
 				break;
 			case 2:
-				this.cena =  waga * odleglosc * 0.035;
+				this.cena =  waga * odleglosc * 0.35;
 				break;
 			case 3:
-				this.cena =  waga * odleglosc * 0.04;
+				this.cena =  waga * odleglosc * 0.4;
 				break;
 				default :
 					this.cena = -1;
@@ -79,9 +79,16 @@ public class Przesylka {
 		return this.cena;
 	}
 	
-void setMiastoNadania(String miasto)
+public void setMiastoNadania(String miasto)
 {
 	this.miastoNadania=miasto;
 }
+
+public double getWaga()
+{
+	return this.waga;
+}
+
+
 }
 
