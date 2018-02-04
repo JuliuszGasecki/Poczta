@@ -1,3 +1,9 @@
+/*
+ * Author: Juliusz G¹secki
+ * Description: 
+ * Date:04.02.2018
+ * 
+ */
 package Przesylka;
 
 public class Przesylka {
@@ -9,6 +15,7 @@ public class Przesylka {
 	String adresat;
 	String nadawca;
 	String miasto;
+	String miastoNadania;
 	boolean typ;
 	double cena;
 	
@@ -27,7 +34,7 @@ public class Przesylka {
 		this.typ = typ;
 	}
 	
-	void setCena(double odleglosc)
+	public double setCena(double odleglosc)
 	{
 		if(typ = true)
 		{
@@ -69,7 +76,12 @@ public class Przesylka {
 			}
 			
 		}
+		return this.cena;
 	}
 	
-
+void setMiastoNadania(String miasto)
+{
+	this.miastoNadania=miasto;
 }
+}
+
