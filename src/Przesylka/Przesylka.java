@@ -88,6 +88,10 @@ public double getWaga()
 {
 	return this.waga;
 }
+public int getID()
+{
+	return this.ID;
+}
 
 
 }

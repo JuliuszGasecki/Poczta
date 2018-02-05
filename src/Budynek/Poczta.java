@@ -27,6 +27,7 @@ warunek:		do {
 		}while(true);
 		
 		System.out.println("Dzisiejsza ilosc paczek to " + p.iloscPrzesylek());	
+		p.showID();
 	}
 	
 	/*

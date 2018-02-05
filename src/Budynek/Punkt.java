@@ -48,7 +48,7 @@ public class Punkt {
 		}
 	else if(czyList(waga) == 2)
 	{
-			przesylki.add(new Listt(nextID++, waga, rozmiar, adresat, imie, adres));
+			przesylki.add(new Listt(++nextID, waga, rozmiar, adresat, imie, adres));
 			System.out.println("Dodano list");
 	}
 	else if (czyList(waga) == -1)
@@ -92,7 +92,12 @@ public class Punkt {
 		return przesylki.get(przesylki.size()-1).setCena( mapa.wybierzMiasto(miastoPoczatkowe, miastoKoncowe) );
 	}
 	
-	
+	public void showID()
+	{
+		for(Przesylka p: przesylki)
+			System.out.print(p.getID() + " ");
+		System.out.println();
+	}
 	
 
 }
