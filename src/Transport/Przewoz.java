@@ -7,7 +7,7 @@ public interface Przewoz {
 	void zawiez();
 	double naliczCenePrzewozu(double odleglosc);
 	boolean sprawdzCel(Przesylka przesylka);
-	
+	int getID();
 
 	
 

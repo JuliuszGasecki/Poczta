@@ -17,34 +17,42 @@ public class Ciezarowka implements Przewoz{
 	String cel;
 	List<Przesylka> przesylki;
 	boolean wTrasie;
+	final double cenaKierowcy; //NA GODZINE
+	final double kilometryGodzina;
+	final double kosztyWlasne; //za przewoz
 	
 	
-	public Ciezarowka(int ID, double cenaPaliwa, double ladownosc,String cel)
+	public Ciezarowka(int ID, double cenaPaliwa,String cel)
 	{
 		this.ID= ID + 2000;
-		this.cenaPaliwa = cenaPaliwa;
-		this.ladownosc = ladownosc;
+		this.cenaPaliwa = cenaPaliwa/10;
+		this.ladownosc = 300;
 		this.cel = cel;
 		this.przesylki = new ArrayList<>();
 		this.wTrasie = false;
+		this.cenaKierowcy = 20;
+		this.kilometryGodzina = 70;
+		this.kosztyWlasne = 300;
+		
 	}
 	
-	public Ciezarowka(double cenaPaliwa, double ladownosc,String cel)
+	public Ciezarowka(double cenaPaliwa,String cel, double cenaKierowcy, double kilometryGodzina, double koszty)
 	{
 		this.cenaPaliwa = cenaPaliwa;
-		this.ladownosc = ladownosc;
 		this.cel = cel;
 		this.przesylki = new ArrayList<>();
 		this.wTrasie = false;
+		this.cenaKierowcy = cenaKierowcy;
+		this.kilometryGodzina = kilometryGodzina;
+		this.kosztyWlasne = koszty;
 	}
 
 	@Override
 	public boolean pobierzPrzesylke(Przesylka przesylka) {
-		
+	double waga=0;
+		while(waga<=ladownosc)
 		if(sprawdzCel(przesylka))
 		{
-		double waga=0;
-		while(waga<=ladownosc)
 		przesylki.add(przesylka);
 		waga+=przesylka.getWaga();
 		return true;
@@ -61,7 +69,7 @@ public class Ciezarowka implements Przewoz{
 	@Override
 	public double naliczCenePrzewozu(double odleglosc) {
 		
-		return 0;
+		return odleglosc * kilometryGodzina* cenaPaliwa * cenaKierowcy + kosztyWlasne;
 	}
 
 	@Override
@@ -69,6 +77,58 @@ public class Ciezarowka implements Przewoz{
 	if(przesylka.getMiasto().equals(cel))
 		return true;
 	return false;
+	}
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
+	public double getCenaPaliwa() {
+		return cenaPaliwa;
+	}
+
+	public void setCenaPaliwa(double cenaPaliwa) {
+		this.cenaPaliwa = cenaPaliwa;
+	}
+
+	public double getLadownosc() {
+		return ladownosc;
+	}
+
+	public void setLadownosc(double ladownosc) {
+		this.ladownosc = ladownosc;
+	}
+
+	public List<Przesylka> getPrzesylki() {
+		return przesylki;
+	}
+
+	public void setPrzesylki(List<Przesylka> przesylki) {
+		this.przesylki = przesylki;
+	}
+
+	public boolean iswTrasie() {
+		return wTrasie;
+	}
+
+	public void setwTrasie(boolean wTrasie) {
+		this.wTrasie = wTrasie;
+	}
+
+	public double getCenaKierowcy() {
+		return cenaKierowcy;
+	}
+
+	public double getKilometryGodzina() {
+		return kilometryGodzina;
+	}
+
+	public double getKosztyWlasne() {
+		return kosztyWlasne;
 	}
 	
 	

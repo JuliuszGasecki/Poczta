@@ -8,7 +8,7 @@ package Budynek;
 import Przesylka.*;
 import Mapa.*;
 import java.util.List;
-import java.util.Scanner;
+//import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Punkt {
@@ -43,7 +43,7 @@ public class Punkt {
 		
 		if(czyList(waga) == 1)
 		{	
-			przesylki.add(new Paczka(nextID++, waga, rozmiar, adresat, imie, adres));
+			przesylki.add(new Paczka(++nextID, waga, rozmiar, adresat, imie, adres));
 			System.out.println("Dodano paczke");
 		}
 	else if(czyList(waga) == 2)
@@ -98,6 +98,16 @@ public class Punkt {
 			System.out.print(p.getID() + " ");
 		System.out.println();
 	}
+
+	public List<Przesylka> getPrzesylki() {
+		return przesylki;
+	}
+
+	public void setPrzesylki(List<Przesylka> przesylki) {
+		this.przesylki = przesylki;
+	}
+	
+	
 	
 
 }

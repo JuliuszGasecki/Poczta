@@ -11,7 +11,7 @@ import Przesylka.*;
 public class Skuter extends Ciezarowka{
 
 	public Skuter(int ID, double cenaPaliwa, String cel) {
-		super(cenaPaliwa,cel);
+		super(cenaPaliwa,cel, 16, 40, 50); //No i super kurwo 
 		this.ID = ID + 1000;
 		this.ladownosc = 2;
 		
@@ -31,4 +31,10 @@ public class Skuter extends Ciezarowka{
 		return false;
 			
 	}
+	@Override
+	public double naliczCenePrzewozu(double odleglosc) {
+		
+		return  cenaKierowcy + kosztyWlasne;
+	}
+
 }
