@@ -6,7 +6,7 @@
  */
 package Przesylka;
 
-public class Przesylka {
+abstract public class Przesylka {
 	
 	protected
 	int ID;
@@ -92,6 +92,16 @@ public int getID()
 {
 	return this.ID;
 }
+
+public String getMiasto() {
+	return miasto;
+}
+
+public void setMiasto(String miasto) {
+	this.miasto = miasto;
+}
+
+
 
 
 }

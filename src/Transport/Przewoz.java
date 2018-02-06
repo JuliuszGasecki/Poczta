@@ -1,11 +1,14 @@
-/*
- * Author: Juliusz G¹secki
- * Description: 
- * Date:04.02.2018
- * 
- */
 package Transport;
+import Przesylka.*;
 
-public class Przewoz {
+public interface Przewoz {
+	
+	boolean pobierzPrzesylke(Przesylka przesylka);
+	void zawiez();
+	double naliczCenePrzewozu(double odleglosc);
+	boolean sprawdzCel(Przesylka przesylka);
+	
+
+	
 
 }
