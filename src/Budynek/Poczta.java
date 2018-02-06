@@ -33,14 +33,14 @@ warunek:		do {
 			
 			if(in.nextInt()==0)
 			{
-			p.showID();
-			System.out.println("Dzisiejsza ilosc paczek to " + p.iloscPrzesylek());		
-			for(Przewoz pojazd: zp.getPojazdy())
-			{
-			r.zaladuj(p.getPrzesylki(), pojazd);
-			}
-			System.out.println("Dzisiejsza ilosc paczek to " + p.iloscPrzesylek());
-			break warunek;
+				p.showID();
+				System.out.println("Dzisiejsza ilosc paczek to " + p.iloscPrzesylek());		
+					for(int i = 0 ; i < zp.iloscPojazdow() ; i++)
+						{
+							r.zaladuj(p.getPrzesylki(), zp.getPojazd(i));
+						}
+				System.out.println("Dzisiejsza ilosc paczek to " + p.iloscPrzesylek());
+				break warunek;
 			}
 		}while(true);
 		
