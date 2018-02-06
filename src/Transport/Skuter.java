@@ -22,10 +22,7 @@ public class Skuter extends Ciezarowka{
 		
 		if(sprawdzCel(przesylka)&&przesylka instanceof Listt)
 		{
-		double waga=0;
-		while(waga<=ladownosc)
 		przesylki.add(przesylka);
-		waga+=przesylka.getWaga();
 		return true;
 		}
 		return false;

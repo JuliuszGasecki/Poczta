@@ -49,12 +49,9 @@ public class Ciezarowka implements Przewoz{
 
 	@Override
 	public boolean pobierzPrzesylke(Przesylka przesylka) {
-	double waga=0;
-		while(waga<=ladownosc)
 		if(sprawdzCel(przesylka))
 		{
 		przesylki.add(przesylka);
-		waga+=przesylka.getWaga();
 		return true;
 		}
 		return false;

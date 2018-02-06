@@ -44,4 +44,11 @@ public class ZarzadzniePojazdami {
 		return pojazdy.size();
 	}
 
+	public void wypiszID()
+	
+	{
+		for(Przewoz pojazd: pojazdy) {
+			System.out.print(pojazd.getID());
+		}System.out.println();
+	}
 }

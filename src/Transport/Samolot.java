@@ -39,10 +39,7 @@ public class Samolot implements Przewoz{
 		
 		if(sprawdzCel(przesylka))
 		{
-		double waga=0;
-		while(waga<=ladownosc)
 		przesylki.add(przesylka);
-		waga+=przesylka.getWaga();
 		return true;
 		}
 		return false;

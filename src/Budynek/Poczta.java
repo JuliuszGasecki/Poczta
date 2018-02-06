@@ -25,6 +25,7 @@ public class Poczta {
 		zp.dodajCiezarowke("Tokio");
 		zp.dodajSkuter("Lodz");
 		zp.dodajSamolot("Rio");
+	//	zp.wypiszID();
 		System.out.println(zp.iloscPojazdow());
 warunek:		do {
 			System.out.println("Co wyslac?");
@@ -39,6 +40,7 @@ warunek:		do {
 						{
 							r.zaladuj(p.getPrzesylki(), pojazd);
 						}
+				
 				System.out.println("Dzisiejsza ilosc paczek to " + p.iloscPrzesylek());
 				break warunek;
 			}
