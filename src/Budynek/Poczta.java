@@ -35,9 +35,9 @@ warunek:		do {
 			{
 				p.showID();
 				System.out.println("Dzisiejsza ilosc paczek to " + p.iloscPrzesylek());		
-					for(int i = 0 ; i < zp.iloscPojazdow() ; i++)
+					for(Przewoz pojazd: zp.getPojazdy())
 						{
-							r.zaladuj(p.getPrzesylki(), zp.getPojazd(i));
+							r.zaladuj(p.getPrzesylki(), pojazd);
 						}
 				System.out.println("Dzisiejsza ilosc paczek to " + p.iloscPrzesylek());
 				break warunek;

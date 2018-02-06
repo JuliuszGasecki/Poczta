@@ -1,2 +1,3 @@
-#Post office simulation;
-Simple simulation of post office
+#Post office simulation
+
+Dupka xD
