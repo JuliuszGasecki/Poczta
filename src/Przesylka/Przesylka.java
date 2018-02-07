@@ -101,7 +101,10 @@ public void setMiasto(String miasto) {
 	this.miasto = miasto;
 }
 
-
+public String toString()
+{
+	return ("N: " + this.nadawca + " O: " + this.adresat + " do: " + this.miasto + " o wadze: " + this.waga + "w cenie " + this.cena);
+}
 
 
 }

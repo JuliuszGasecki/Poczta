@@ -107,6 +107,11 @@ public class Punkt {
 		this.przesylki = przesylki;
 	}
 	
+	public void pokazPrzesylke(int i)
+	{
+		System.out.println(przesylki.get(i));
+	}
+	
 	
 	
 

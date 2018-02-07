@@ -6,6 +6,8 @@
  */
 package Budynek;
 import java.util.*;
+
+import Interfejs.Interfejs;
 import Transport.*;
 
 public class Poczta {
@@ -15,6 +17,7 @@ public class Poczta {
 	 */
 	public void zarzadzaj()
 	{
+		Interfejs itf = new Interfejs(1);
 		Scanner in = new Scanner(System.in);
 		Scanner str = new Scanner(System.in);
 	System.out.println("Witamy na poczcie");
@@ -26,10 +29,12 @@ public class Poczta {
 		zp.dodajSkuter("Lodz");
 		zp.dodajSamolot("Rio");
 	//	zp.wypiszID();
+		int i=0;
 		System.out.println(zp.iloscPojazdow());
 warunek:		do {
 			System.out.println("Co wyslac?");
 			p.dodajPrzesylke(podajWage(in), 1, podajAdresata(str), podajNadawce(str), podajCel(str), "Lodz");
+			p.pokazPrzesylke(i++);
 			System.out.println("czy zakonczyc?");
 			
 			if(in.nextInt()==0)

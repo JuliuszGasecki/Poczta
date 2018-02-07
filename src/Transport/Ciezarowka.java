@@ -1,7 +1,7 @@
-/*
- * Author: Juliusz G¹secki
+/**
+ * @author: Juliusz G¹secki
  * Description: 
- * Date:04.02.2018
+ * @date: 04.02.2018
  * 
  */
 package Transport;
