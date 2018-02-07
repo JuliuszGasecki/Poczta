@@ -18,6 +18,7 @@ public class Poczta {
 	public void zarzadzaj()
 	{
 		Interfejs itf = new Interfejs(1);
+		itf.initButtons();
 		Scanner in = new Scanner(System.in);
 		Scanner str = new Scanner(System.in);
 	System.out.println("Witamy na poczcie");
